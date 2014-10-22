@@ -31,6 +31,8 @@ class Course < ActiveRecord::Base
   # Concerns macros
   include Select2Concern
   include Permalinkable
+  include Elasticsearch::Model
+  include Elasticsearch::Model::Callbacks
 
   # Constants
 

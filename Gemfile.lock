@@ -64,6 +64,19 @@ GEM
     coffee-script-source (1.8.0)
     colorize (0.7.3)
     diff-lcs (1.2.5)
+    elasticsearch (1.0.1)
+      elasticsearch-api (= 1.0.1)
+      elasticsearch-transport (= 1.0.1)
+    elasticsearch-api (1.0.1)
+      multi_json
+    elasticsearch-model (0.1.0)
+      activesupport (> 3)
+      elasticsearch (> 0.4)
+      hashie
+    elasticsearch-rails (0.1.0)
+    elasticsearch-transport (1.0.1)
+      faraday
+      multi_json
     enumerize (0.8.0)
       activesupport (>= 3.2)
     erubis (2.7.0)
@@ -75,6 +88,8 @@ GEM
       railties (>= 3.0.0)
     faker (1.4.3)
       i18n (~> 0.5)
+    faraday (0.9.0)
+      multipart-post (>= 1.2, < 3)
     flowdock (0.3.1)
       httparty (~> 0.7)
       multi_json
@@ -85,6 +100,7 @@ GEM
       diff-lcs (~> 1.1)
       mime-types (~> 1.15)
       posix-spawn (~> 0.3.6)
+    hashie (3.3.1)
     hike (1.2.3)
     httparty (0.13.1)
       json (~> 1.8)
@@ -108,6 +124,7 @@ GEM
     minitest (5.4.1)
     multi_json (1.10.1)
     multi_xml (0.5.5)
+    multipart-post (2.0.0)
     nested_form (0.3.2)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
@@ -214,6 +231,8 @@ DEPENDENCIES
   capistrano-rails
   carrierwave
   coffee-rails (~> 4.0.0)
+  elasticsearch-model
+  elasticsearch-rails
   enumerize
   factory_girl_rails
   faker

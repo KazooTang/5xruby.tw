@@ -4,7 +4,8 @@ class PostsController < ApplicationController
   def index
     respond_to do |format|
       format.html do
-        @posts = Post.online.publish.order('publish_at DESC').page(params[:page]).per(3)
+        @posts = params[:q] ? Post.search(params[:q]).records : Post.all
+        @posts = @posts.online.publish.order('publish_at DESC').page(params[:page]).per(3)
         @query_tags = params[:tags].is_a?(String) ? params[:tags].split(',') : params[:tags]
         @posts = @posts.tagged_with(@query_tags) if @query_tags.present?
       end

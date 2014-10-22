@@ -48,6 +48,10 @@ gem 'acts-as-taggable-on'
 gem 'select2_helper'
 gem 'gistyle'
 
+# search
+gem 'elasticsearch-model'
+gem 'elasticsearch-rails'
+
 # assets
 gem 'bootstrap-sass'
 gem 'jquery-ui-rails'

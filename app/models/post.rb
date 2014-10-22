@@ -23,6 +23,8 @@ class Post < ActiveRecord::Base
   # Concerns macros
   acts_as_taggable
   include Permalinkable
+  include Elasticsearch::Model
+  include Elasticsearch::Model::Callbacks
 
   # Constants
 
